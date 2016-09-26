@@ -1,12 +1,12 @@
-libpd (pure data) with unity 4.x
+libpd (pure data) for unity 5.x
+
+updated from libpd4unity by Patrick Sebastien
+
+this project only supports Windows currently 
 
 ### status: ###
 * working with unity pro and unity free*
 * Windows 32bit & 64bit
-* OSX
-* Android
-
-** You need to copy libpdcsharp.dll where Unity.exe is installed or where your game executable is located in case of a pc standalone build. This hasn't been tested on OSX.
 
 The following files/folders in the Unity project are of relevance:
 * LibPdFilterRead.cs: Initialises libpd, sets up audio callback, opens patches, etc. Best attached to the camera or an empty game object. Make sure there is only ONE instance of this script active in a scene. 
@@ -22,11 +22,6 @@ To ensure cross-platform compatibility, place all patches, audio files and exter
 
 ### known issues: ###
 * Unpredictable SIGILL when using Unity Editor
-* Android: Can currently only open patches that have no dependencies. Pd won't find externals or audio files within the PdAssets folder. This is an Android OS related issue. Might need to use one of the Android APIs to fix this.
-
-### uPD ###
-A relatively complete alternative to Unity's audio engine using Pure Data and LibPD.
-https://github.com/Magicolo/uPD
 
 ### thanks to: ###
 * Miller Puckette (pure data)
@@ -37,12 +32,10 @@ https://github.com/Magicolo/uPD
 * Patrick Sebastien || http://www.workinprogress.ca || (all the initial work and Windows support)
 * Varun Nair || http://www.re-sounding.com/ || (OSX and Android) 
 * Peter Cardwell-Gardner || http://www.thefuntastic.com/ || (dll not found fix)
+* Patrick Sebastien
 
-### alternative: ###
-https://github.com/hagish/kalimba
+### original project (unity4 winx86,android,ios support): ###
+* https://github.com/patricksebastien/libpd4unity ###
 
 ### howto: ###
-* Windows: install mingw legacy (http://sourceforge.net/projects/mplayer-ww/files/MinGW-full/) and compile libpd (https://github.com/libpd/libpd)
-make csharplib. copy libs/libpdcsharl.dll / pthreadGC2.dll to Assets/Plugins
-* OSX: More info coming soon (libpdcsharp.bundle included with this project works fine)
-* Android: More info coming soon (libpdcsharp.so included with this project works fine)
+* Windows: nuget.exe install LibPDBinding -Version 0.3.0

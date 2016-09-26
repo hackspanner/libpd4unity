@@ -7,10 +7,6 @@ using System.IO;
 
 public class LibPdFilterRead : MonoBehaviour
 {
-	// C# pointer stuff
-	private GCHandle dataHandle;
-	private IntPtr dataPtr;
-
 	// Patch handle, create one for each patch
 	private int SPatch;
 
@@ -42,14 +38,8 @@ public class LibPdFilterRead : MonoBehaviour
 	// Unity audio callback
 	public void OnAudioFilterRead (float[] data, int channels)
 	{	
-		if(dataPtr == IntPtr.Zero)
-		{
-			dataHandle = GCHandle.Alloc(data,GCHandleType.Pinned);
-			dataPtr = dataHandle.AddrOfPinnedObject();
-		}
-		
 		if (islibpdready) {
-			LibPD.Process(numberOfTicks, dataPtr, dataPtr);
+			LibPD.Process(numberOfTicks, data, data);
 		}
 	}
 
@@ -64,12 +54,6 @@ public class LibPdFilterRead : MonoBehaviour
 		islibpdready = false;
 	}
 	
-	public void OnDestroy()
-	{
-		dataHandle.Free();
-		dataPtr = IntPtr.Zero;
-	}
-
 	/** Pd helper functions from here **/
 	
 	// Load pd patch, specfied in Unity's inspector, returns patch handle
