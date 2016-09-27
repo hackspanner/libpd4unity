@@ -27,12 +27,11 @@ To ensure cross-platform compatibility, place all patches, audio files and exter
 * Miller Puckette (pure data)
 * Peter Brinkmann (libpd)
 * Tebjan Halm (libpdcsharp)
-* Jean-Sébastien Leduc (bridge)
+* Jean-SÃ©bastien Leduc (bridge)
 * Magicolo (uPD)
 * Patrick Sebastien || http://www.workinprogress.ca || (all the initial work and Windows support)
 * Varun Nair || http://www.re-sounding.com/ || (OSX and Android) 
 * Peter Cardwell-Gardner || http://www.thefuntastic.com/ || (dll not found fix)
-* Patrick Sebastien
 
 ### original project (unity4 winx86,android,ios support): ###
 * https://github.com/patricksebastien/libpd4unity ###
