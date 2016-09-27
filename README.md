@@ -1,11 +1,9 @@
-libpd (pure data) for unity 5.x
+libpd (pure data) for Unity 5.x
 
-updated from libpd4unity by Patrick Sebastien
-
-this project only supports Windows currently 
+This project only supports Windows currently 
 
 ### status: ###
-* working with unity pro and unity free*
+* working with unity pro and unity free
 * Windows 32bit & 64bit
 
 The following files/folders in the Unity project are of relevance:
@@ -32,9 +30,6 @@ To ensure cross-platform compatibility, place all patches, audio files and exter
 * Patrick Sebastien || http://www.workinprogress.ca || (all the initial work and Windows support)
 * Varun Nair || http://www.re-sounding.com/ || (OSX and Android) 
 * Peter Cardwell-Gardner || http://www.thefuntastic.com/ || (dll not found fix)
-
-### original project (unity4 winx86,android,ios support): ###
-* https://github.com/patricksebastien/libpd4unity ###
 
 ### howto: ###
 * Windows: nuget.exe install LibPDBinding -Version 0.3.0
