@@ -18,7 +18,7 @@ The following files/folders in the Unity project are of relevance:
 The whole libpd API hasn't been tested, but will happen at some point in the near future. Feel free to test and report any issues. 
 
 ### setup: ###
-To ensure cross-platform compatibility, place all patches, audio files and externals in Assets > StreamingAssets > PdAssets. Externals have been tested and work fine on OSX. Other platforms are pending.
+To ensure cross-platform compatibility, place all patches, audio files and externals in Assets > StreamingAssets > PdAssets. Externals are untested.
 
 ### known issues: ###
 * Unpredictable SIGILL when using Unity Editor
